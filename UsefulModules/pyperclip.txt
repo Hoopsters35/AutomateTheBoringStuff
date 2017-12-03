@@ -1,0 +1,4 @@
+import pyperclip
+
+pyperclip.paste gets the text off of the clipboard
+pyperclip.copy takes a single string and copies it to the clipboard
