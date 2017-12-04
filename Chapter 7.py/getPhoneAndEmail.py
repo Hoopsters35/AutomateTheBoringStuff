@@ -25,7 +25,13 @@ for groups in phoneRegex.findall(text):
 		phoneNum += ' x' + groups[8]
 	matches.append(phoneNum)
 
-print(matches)
+for groups in emailRegex.findall(text):
+	matches.append(groups[0])
+
+#TODO format matches
+formattedMatches = ""
+for group in matches:
+	formattedMatches += str(group) + "\n "
 
 #TODO copy all matches to clipboard
 
