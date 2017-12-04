@@ -2,3 +2,15 @@ import pyperclip
 
 pyperclip.paste gets the text off of the clipboard
 pyperclip.copy takes a single string and copies it to the clipboard -- can use with join() method to create a single string
+
+test phone nums:
+749-8584
+8493939
+8495038285
+859-838-2910
+(614)-748-3829
+
+test email:
+jfdksla.fdjsak@gjaj.com
+whofdjkJKL0@gmail.eu
+noed@jk.co
