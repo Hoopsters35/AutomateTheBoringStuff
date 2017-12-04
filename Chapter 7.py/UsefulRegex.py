@@ -8,12 +8,12 @@ import re
 #requites triple quotes at start and end of regex
 #to get phone numbers
 phoneRegex = re.compile(r'''(
-    (\d{3}|\(\d{3}\))?            # area code
-    (\s|-|\.)?                    # separator
-    \d{3}                         # first 3 digits
-    (\s|-|\.)                     # separator
-    \d{4}                         # last 4 digits
-    (\s*(ext|x|ext.)\s*\d{2,5})?  # extension
+    (\d{3}|\(\d{3}\))?                # area code
+    (\s|-|\.)?                        # separator
+    (\d{3})                           # first 3 digits
+    (\s|-|\.)                         # separator
+    (\d{4})                           # last 4 digits
+    (\s*(ext|x|ext.)\s*(\d{2,5}))?    # extension
     )''', re.VERBOSE)
 #other ending arguments include re.DOTALL which will go past any new line characeters when compiling
 #without re.DOTALL, the regex will only search up until the first \n
