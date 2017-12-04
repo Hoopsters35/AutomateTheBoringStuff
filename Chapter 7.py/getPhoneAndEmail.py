@@ -16,7 +16,7 @@ emailRegex = re.compile(r'''(
 	(\.[a-zA-Z]{2,4})       # dot-something
 	)''', re.VERBOSE)
 
-#TODO find all matches on clipboard
+
 text = pyperclip.paste()
 matches = []
 for groups in phoneRegex.findall(text):
@@ -28,13 +28,10 @@ for groups in phoneRegex.findall(text):
 for groups in emailRegex.findall(text):
 	matches.append(groups[0])
 
-#TODO format matches
+
 formattedMatches = ""
 for group in matches:
 	formattedMatches += str(group) + "\n "
 print("Copied to clipboard: ")
 print(formattedMatches) 
-
-#TODO copy all matches to clipboard
-
-#TODO print message displaying results
+pyperclip.copy(formattedMatches)
