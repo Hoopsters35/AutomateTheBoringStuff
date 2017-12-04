@@ -21,7 +21,7 @@ text = pyperclip.paste()
 matches = []
 for groups in phoneRegex.findall(text):
 	phoneNum = "-".join([groups[1], groups[3], groups[5]])
-	if groups[8] != ' ':
+	if groups[8]:
 		phoneNum += ' x' + groups[8]
 	matches.append(phoneNum)
 
@@ -32,6 +32,8 @@ for groups in emailRegex.findall(text):
 formattedMatches = ""
 for group in matches:
 	formattedMatches += str(group) + "\n "
+print("Copied to clipboard: ")
+print(formattedMatches) 
 
 #TODO copy all matches to clipboard
 
