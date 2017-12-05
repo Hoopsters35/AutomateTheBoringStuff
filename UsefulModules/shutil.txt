@@ -1,0 +1,12 @@
+import shutil
+
+shell utilities
+
+used to work with files more directly than os
+shutil.copy(filepath, newfilepath) -- can rename the new file copy here
+shutil.move(filepath, newfilepath) -- can rename the file in the same line (only way to rename the file)
+
+shutil.copytree -- copies directory
+
+shutil.rmtree -- permanently deletes a directory and all of its contents -- very risky
+

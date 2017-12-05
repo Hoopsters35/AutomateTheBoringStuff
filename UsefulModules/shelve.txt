@@ -1,0 +1,7 @@
+import shelve
+
+used to store data structures in a dictionary style structure - can be called into other programs
+
+shelf = shelve.open('nameOfShelf') -- creates a new shelf in the current directory with 3 local files
+shelf[cats] = ['zoey', 'kitty'] -- creates a permanent data structure called 'cats' in the nameOfShelf shelf
+shelf.close() -- close like a file

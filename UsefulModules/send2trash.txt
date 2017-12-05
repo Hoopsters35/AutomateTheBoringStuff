@@ -1,0 +1,5 @@
+import send2trash
+
+must first install with: pip install send2trash
+
+send2trash.send2trash(filepath) -- sends that file to the recycling bin instead of permanently deleting
