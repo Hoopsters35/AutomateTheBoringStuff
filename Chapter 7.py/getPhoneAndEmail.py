@@ -20,7 +20,10 @@ emailRegex = re.compile(r'''(
 text = pyperclip.paste()
 matches = []
 for groups in phoneRegex.findall(text):
-	phoneNum = "-".join([groups[1], groups[3], groups[5]])
+	phoneNum = ""
+	if groups[1]:
+		phoneNum = "-".join([groups[1], groups[3], groups[5]])
+	else: phoneNum = "-".join([groups[3], groups[5]])
 	if groups[8]:
 		phoneNum += ' x' + groups[8]
 	matches.append(phoneNum)
@@ -29,9 +32,7 @@ for groups in emailRegex.findall(text):
 	matches.append(groups[0])
 
 
-formattedMatches = ""
-for group in matches:
-	formattedMatches += str(group) + "\n "
+formattedMatches = '\n'.join(matches)
 print("Copied to clipboard: ")
 print(formattedMatches) 
 pyperclip.copy(formattedMatches)
