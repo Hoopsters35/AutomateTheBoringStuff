@@ -29,5 +29,5 @@ os.path.isfile(path) #returns true if path is a file
 os.path.getsize(filename) #returns size in bytes
 os.listdir(directory name) #lists everything in given directory
 
-
+os.makedirs(filepath) #makes directory for given path
 
