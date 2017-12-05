@@ -1,0 +1,26 @@
+import zipfile
+
+used to work with and create zip files
+
+exampleZip = zipfile.ZipFile(path.zip) -- creates a ZipFile object (similar to a file object)
+
+exampleZip.namelist() -- returns a list of directories and files found in the zip file
+
+spamInfo = exampleZip.getinfo('spam.txt') -- pass some file found in the .namelist()
+spamInfo.file_size -- variable, not function that is equal to the unzipped size of the file
+spamInfo.compress_size -- variable, not function that is equal to the zipped size of the file
+
+exampleZip.close() -- just like files
+
+ZipFile objects contain the entire file, but ZipInfo objects contain much useful information
+
+exampleZip.extractall() -- extracts all elements of the zip file into the current working directory
+exampleZip.extractall(directory_path) -- extracts elemenets to given directory -- can create a directory if necessary
+
+exampleZip.extract(file_name, path) -- extracts a single item from the zip file into the given path (cwd by default)
+
+======= create new zip
+
+newZip = zipfile.ZipFile(name.zip, 'w') -- just like a file object (can also use 'a' instead of 'w' to append instead of overwrite)
+
+newZip.write(file_path, compress_type=zipfile.ZIP_DEFLATED) -- writes file to the zip file, 2nd arg is the method of compression
