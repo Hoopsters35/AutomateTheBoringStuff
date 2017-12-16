@@ -22,3 +22,4 @@ for folder, subfolder, file in os.walk():
 #flip the date and month spot on each found file with shutil.mv
 
 #print message of completion
+print('end of program')
