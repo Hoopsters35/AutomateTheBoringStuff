@@ -13,8 +13,11 @@ amerNameRegex = re.compile(('''
     '''), re.VERBOSE)
 
 #cd to the correct directory
-print(os.getcwd())
+os.chdir('/home/justin/Python-Workspace/AutomateTheBoringStuff/Chapter\ 9')
 #find all instances of files with american names in the directory
+for folder, subfolder, file in os.walk():
+    if amerNameRegex.match(file):
+        print(file)
 
 #flip the date and month spot on each found file with shutil.mv
 
